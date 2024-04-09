@@ -1,3 +1,11 @@
+'''
+{%..%} for statements
+{{  }}expressions to print output
+{#...#}this is for commets 
+'''
+
+
+
 from flask import Flask,redirect,url_for,render_template,request
 app=Flask(__name__)
 
@@ -12,7 +20,8 @@ def Success(score):
         res="PASS"
     else:
         res="FAIL"
-    return render_template('result.html',result=res)
+    exp={'score':score,'res':res}
+    return render_template('result.html',result=exp)
 
 
 @app.route('/Fail/<int:score>')

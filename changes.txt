@@ -1,0 +1,5 @@
+    res=""
+    if score>=50:
+        res="PASS"
+    else:
+        res="FAIL"
