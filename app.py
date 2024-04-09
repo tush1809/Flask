@@ -15,12 +15,12 @@ def welcome ():
 
 @app.route('/Success/<int:score>')
 def Success(score):
-    res=""
+    Res=""
     if score>=50:
-        res="PASS"
+        Res="PASS"
     else:
-        res="FAIL"
-    exp={'score':score,'res':res}
+        Res="FAIL"
+    exp={'Score':score,'Result':Res}
     return render_template('result.html',result=exp)
 
 
@@ -46,12 +46,12 @@ def Submit():
         english=float(request.form['english'])
         history=float(request.form['history'])
         total_score=(science+maths+english+history)/4
-    res=""
+    Res=""
     if total_score>=50:
-        res="Success"
+        Res="Success"
     else:
-        res="Fail"
-    return redirect(url_for(res,score=total_score))
+        Res="Fail"
+    return redirect(url_for(Res,score=total_score))
 
 
 

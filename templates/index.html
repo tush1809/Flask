@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marks Form</title>
+
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <h2>Enter Your Marks</h2>
-    <form action="/submit" method="post">
-        <label for="maths">Maths:</label>
-        <input type="number" id="maths" name="maths" min="0" max="100" required><br><br>
+<form action="/submit" method="post">
         
-        <label for="science">Science:</label>
-        <input type="number" id="science" name="science"   min="0" max="100" required><br><br>
+    <label for="maths">Math:</label>
+    <input type="number" id="maths" name="maths" value="0" min="0" max="100" required/><br><br>
         
-        <label for="english">English:</label>
-        <input type="number" id="english" name="english" min="0" max="100" required><br><br>
+    <label for="science">Science:</label>
+    <input type="number" id="science" name="science" value="0" min="0" max="100" required/><br><br>
         
-        <label for="history">History:</label>
-        <input type="number" id="history" name="history" min="0" max="100" required><br><br>
+    <label for="english">English:</label>
+    <input type="number" id="english" name="english" value="0" min="0" max="100" required/><br><br>
         
-        <input type="submit" value="Submit">
-    </form>
+    <label for="history">History:</label>
+    <input type="number" id="history" name="history" value="0" min="0" max="100" required/><br><br>
+        
+    <input type="submit" value="Submit">
+</form>
+
+
+<script src="/static/script/script.js"></script> 
+
 </body>
 </html>

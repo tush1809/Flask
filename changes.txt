@@ -3,3 +3,9 @@
         res="PASS"
     else:
         res="FAIL"
+
+    {% if Results>=50 %}
+    <h1>Your result is passed</h1>
+    {% else %}
+    <h1>Your result is failed</h1>
+    {% endif %}

@@ -1,12 +1,21 @@
-<html>
-
-<h2>Final Results</h2>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style1.css">
+</head>
 <body>
-    {% if Results>=50 %}
-    <h1>Your result is passed</h1>
-    {% else %}
-    <h1>Your result is failed</h1>
-    {% endif %}
+    <h2>Final Results</h2>
+<table border =2>
+{% for key,value in result.items() %}
+    <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+    </tr>
+{% endfor %}
+
+</table>
 </body>
 </html>
